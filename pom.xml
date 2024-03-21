@@ -28,7 +28,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>main.AdditionALEnvers</mainClass>
+              <mainClass>main.InverserTableau</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -44,6 +44,4 @@
       </plugin>
     </plugins>
   </build>
-  <reporting>
-</reporting>
 </project>
