@@ -11,11 +11,8 @@
 mvn clean (si nécessaire pour nettoyer ce qui a été fait auparavant)
 mvn compile
 mvn package (afin de faire de cette version un exécutable)
-java -jar target/tp_qualite-1.0.jar (pour exécuter le TP).
-ATTENTION : le main n'est pas en lien avec le TP.
+java -jar target/tp_qualite-1.0.jar (pour exécuter la classe AdditionALEnvers).
 
 ### Pour générer la Javadoc, la commande est la suivante : 
 
 mvn site 
-
-Cependant, cela ne marche actuellement pas
