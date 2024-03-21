@@ -4,15 +4,18 @@
 
 ## Nous allons dans ce document avoir l'ensemble des commandes nécessaires pour compiler mes éléments Maven.
 
-### Avant toute chose, vous devez savoir que ma javadoc ne fonctionne pas pour une raison que j'ignore
-
 ### Voici l'ensemble des commandes dans l'ordre d'exécution : 
 
 mvn clean (si nécessaire pour nettoyer ce qui a été fait auparavant)
+
 mvn compile
+
 mvn package (afin de faire de cette version un exécutable)
+
 java -jar target/tp_qualite-1.0.jar (pour exécuter la classe AdditionALEnvers).
 
 ### Pour générer la Javadoc, la commande est la suivante : 
 
 mvn site 
+
+##Malheureusement, j'ai une erreur de format que je n'avais pas auparavant et je ne sais pas pourquoi
