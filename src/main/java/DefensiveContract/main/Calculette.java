@@ -4,18 +4,18 @@ import pile.Pile;
 
 public class Calculette {
 
-    /* Calcul d'une expression post-fixée.
-     * Modifier la valeur de expr dans le code pour une autre exécution
+    /* Calcul d'une expression post-fixee.
+     * Modifier la valeur de expr dans le code pour une autre execution
      */
     public static void main(String args[]) {
 
-        Pile pileOperandes; // Pile des opérandes durant le calcul
-        int operande; // opérande lue dans l'expression post fixée
-        int operandeGauche; // opérande gauche d'une opération;
-        int operandeDroite; // opérande droite d'une opération
-        int res; // résultats intermédiaires de calculs
-        boolean exprOK; // Permet d'arrêter le calcul si une erreur est rencontrée.
-        String[] exprPostFixee; // expression "éclatée" en opérandes/opérateurs
+        Pile pileOperandes; // Pile des operandes durant le calcul
+        int operande; // operande lue dans l'expression post fixee
+        int operandeGauche; // operande gauche d'une operation;
+        int operandeDroite; // operande droite d'une operation
+        int res; // resultats intermediaires de calculs
+        boolean exprOK; // Permet d'arreter le calcul si une erreur est rencontree.
+        String[] exprPostFixee; // expression "eclatee" en operandes/operateurs
         String expr; // expression initiale (ex : "12 14 + 45 78 + *")
 
         expr = "12 45 + 45 78 + +";
@@ -32,19 +32,19 @@ public class Calculette {
                     case "-":
                     case "/":
                     case "*":
-                        // récupérer opérande droite
+                        // recuperer operande droite
                         try {
                             operandeDroite = pileOperandes.sommet();
                             pileOperandes.depiler();
                         } catch (Exception e) {
-                            throw new Exception("Erreur lors de la récupération de l'opérande droite : " + e.getMessage());
+                            throw new Exception("Erreur lors de la recuperation de l'operande droite : " + e.getMessage());
                         }
-                        // récupérer opérande gauche
+                        // recuperer operande gauche
                         try {
                             operandeGauche = pileOperandes.sommet();
                             pileOperandes.depiler();
                         } catch (Exception e) {
-                            throw new Exception("Erreur lors de la récupération de l'opérande gauche : " + e.getMessage());
+                            throw new Exception("Erreur lors de la recuperation de l'operande gauche : " + e.getMessage());
                         }
 
                         // faire le calcul
@@ -62,18 +62,18 @@ public class Calculette {
                                 res = operandeGauche * operandeDroite;
                                 break;
                             default:
-                                throw new Exception("Opérateur invalide : " + exprPostFixee[i]);
+                                throw new Exception("Operateur invalide : " + exprPostFixee[i]);
                         }
-                        // empiler le résultat
+                        // empiler le resultat
                         try {
                             pileOperandes.empiler(res);
                         } catch (Exception e) {
-                            throw new Exception("Erreur lors de l'empilement du résultat : " + e.getMessage());
+                            throw new Exception("Erreur lors de l'empilement du resultat : " + e.getMessage());
                         }
                         break;
                     default:
                         try {
-                            operande = Integer.parseInt(exprPostFixee[i]); // opérande
+                            operande = Integer.parseInt(exprPostFixee[i]); // operande
                             pileOperandes.empiler(operande);
                         } catch (NumberFormatException nfe) {
                             exprOK = false;
@@ -85,9 +85,9 @@ public class Calculette {
             if (exprOK) {
                 res = pileOperandes.sommet();
                 pileOperandes.depiler();
-                System.out.println("Aucune erreur détectée. Le résultat est " + res);
+                System.out.println("Aucune erreur detectee. Le resultat est " + res);
             } else {
-                System.out.println("Erreur détectée durant le calcul");
+                System.out.println("Erreur detectee durant le calcul");
             }
         } catch (Exception e) {
             System.out.println("Une erreur est survenue : " + e.getMessage());

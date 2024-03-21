@@ -6,8 +6,8 @@ public class InverserTableau {
 
     /*
      * Programme permettant d'inverser le contenu d'un tableau d'entier en utilisant une Pile.
-     * Inverser un tableau : le premier éléments devient le dernier, le deuxième devient l'avant dernier, ...
-     * les opérandes sont fournis par donneesInitiales() (à modifier si besoin)
+     * Inverser un tableau : le premier element devient le dernier, le deuxieme devient l'avant dernier, ...
+     * les operandes sont fournis par donneesInitiales() (a modifier si besoin)
      */
     public static void main(String args[]) {
 
@@ -24,14 +24,14 @@ public class InverserTableau {
             System.out.println("Une erreur est survenue lors de l'inversion du tableau : " + e.getMessage());
         }
 
-        System.out.println("Tableau inversé : ");
+        System.out.println("Tableau inverse : ");
         InverserTableau.afficherTableau(tableauDeValeurs);
     }
 
     /*
-     * Méthode qui utilise une Pile pour inverser le tableau
+     * Methode qui utilise une Pile pour inverser le tableau
      * 
-     * @param tableauDeValeurs tableau à inverser (E/S)
+     * @param tableauDeValeurs tableau a inverser (E/S)
      */
     public static void inverserTableau(int[] pfTableauDeValeurs) throws Exception {
         Pile p;
@@ -54,17 +54,17 @@ public class InverserTableau {
     }
 
     /*
-     * Convertit une chaine contenant une liste d'entiers séparés par des espace en
+     * Convertit une chaine contenant une liste d'entiers separes par des espace en
      * tableau.
-     * Modifier la valeur de expr dans le code pour une autre exécution
+     * Modifier la valeur de expr dans le code pour une autre execution
      * 
      * @return le tableau contenant une liste d'entiers. 
-     * Si une erreur de conversion de chaine en nombre a lieu au runtime : le programme est arrêté
+     * Si une erreur de conversion de chaine en nombre a lieu au runtime : le programme est arrete
      */
     public static int[] donneesInitiales() {
-        int[] data; // liste finale des valeurs entières
-        String expr; // expression initiale (liste de valeurs séparées par des espaces)
-        String[] exprEclatee; // expr "éclatée" en sur séparateur espace
+        int[] data; // liste finale des valeurs entieres
+        String expr; // expression initiale (liste de valeurs separees par des espaces)
+        String[] exprEclatee; // expr "eclatee" en sur separateur espace
 
         expr = "a b";
 
@@ -73,7 +73,7 @@ public class InverserTableau {
         for (int i = 0; i < exprEclatee.length; i++) {
             try {
                 data[i] = Integer.parseInt(exprEclatee[i]);
-            } catch (NumberFormatException nfe) { // échec de parseInt()
+            } catch (NumberFormatException nfe) { // echec de parseInt()
                 System.out.println("Erreur de format");
                 System.exit(1);
             }
@@ -84,7 +84,7 @@ public class InverserTableau {
     /*
      * Affiche les valeurs d'un tableau d'entier
      * 
-     * @param tableauDeValeurs tableau à afficher
+     * @param tableauDeValeurs tableau a afficher
      */
     public static void afficherTableau(int[] pfTableauDeValeurs) {
         String resultatAAfficher;
