@@ -28,7 +28,9 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>InverserTableau</mainClass>
+              <mainClass>main.AdditionALEnvers</mainClass>
+              <mainClass>main.Calculette</mainClass>
+              <mainClass>main.InverserTableau</mainClass>
             </manifest>
           </archive>
         </configuration>
