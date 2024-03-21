@@ -2,9 +2,9 @@
 
 //---------------------------------------------------------------
 
-# Nous allons dans ce document avoir l'ensemble des commandes nécessaires pour compiler mes éléments Maven.
+## Nous allons dans ce document avoir l'ensemble des commandes nécessaires pour compiler mes éléments Maven.
 
-## Avant toute chose, vous devez savoir que ma javadoc ne fonctionne pas pour une raison que j'ignore
+### Avant toute chose, vous devez savoir que ma javadoc ne fonctionne pas pour une raison que j'ignore
 
 ### Voici l'ensemble des commandes dans l'ordre d'exécution : 
 
